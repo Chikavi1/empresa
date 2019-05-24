@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if ($message = Session::get('success'))
+<div class="color-cut">
+  <h5 class="center white-text" style="margin-top: 0 !important;padding: 1em;"><strong>{{ $message }}</strong></h5>
+</div>
+
+@endif
+
 	<div class="row">
 		<div class="col offset-m3 m6">
 			<div class="card">

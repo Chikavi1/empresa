@@ -20,7 +20,11 @@
     </div>
     <div class="section white">
       <div class="row container">
-        <p class="grey-text text-darken-3 lighten-3">Porque mantener a nuestros Clientes satisfechos es lo Más importante para nosotros, te brindamos una pagina de soporte y asistencia técnica, la cual estará en funcionamiento las 24 hrs del día durante todo el año</p>
+        <p class="grey-text text-darken-3 lighten-3 fontx10">Porque mantener a nuestros Clientes satisfechos es lo Más importante para nosotros, te brindamos una pagina de soporte y asistencia técnica, la cual estará en funcionamiento las 24 hrs del día durante todo el año</p>
+        <p class="fontx10">La presente Plataforma donde podrás comunicarnos sobre tus incidentes u posibles problemas  surgidos con el paso del tiempo o requerimiento de Soporte Técnico.
+Trabajamos para resolver cualquier duda tuya durante las 24 hrs del dia los 365 días del año
+Agradecemos tu valiosa cooperación para la mejora de nuestro producto
+Soporte Técnico CHIKAVI´S es un espacio en donde ¡estamos para ayudarte !</p>
         <a href="{{ route('reporte')}}" class="btn btn-block color-cut">Iniciar reporte</a>
       </div>
     </div>

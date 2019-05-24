@@ -7,6 +7,7 @@ use Mail;
 use Session;
 use Redirect;
 use App\incidente;
+use App\Rfc;
 
 class ReportesController extends Controller
 {
@@ -53,20 +54,23 @@ class ReportesController extends Controller
 
         $incidente = new incidente([
             'descripcion' => $mensaje,
-            'id' => $folio,
             'email' => $email,
             'status' => $status
         ]);
         
         $incidente->save();
-        //return view('email.folio')->with(compact('mensaje','tiempo','folio'));
 
-      /*  Mail::send('email.folio',compact('mensaje','tiempo','folio'),function($msj){
+        $rfc = new Rfc([
+            'numero_rfc' => $folio
+        ]);
+        $rfc->save();
+
+        Mail::send('email.folio',compact('mensaje','tiempo','folio'),function($msj){
             $msj->subject('Reporte de chikavi');
             $msj->to('chikavi@hotmail.com');
         });
 
-        dd("se envio");*/
+         return redirect()->route('reporte')->with('success','Se te envio un correo,ya estamos trabajando en ello.');
     }
 
 

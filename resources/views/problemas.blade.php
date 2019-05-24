@@ -19,7 +19,7 @@
         <tbody>
             @foreach($incidentes as $incidente)
           <tr>
-            <td>{{$incidente->id}}</td>
+             <td><a href="{{route('rfc',$incidente->id)}}"> {{$incidente->id}}</a></td>
             <td>{{$incidente->descripcion}}</td>
             <td>{{$incidente->email}}</td>
             <td>{{$incidente->created_at}}</td>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\incidente;
-
+use App\Rfc;
 class IncidentesController extends Controller
 {
     /**
@@ -25,8 +25,24 @@ class IncidentesController extends Controller
 
     public function rfc(Request $request)
     {
-        $datos = incidente::findorfail($request->folio);
+        $datos = Rfc::find($request->folio);
         return view('rfc')->with(compact('datos'));
+    }
+    public function guardar_rfc(Request $request)
+    {
+        Rfc::find($request->numero_rfc)->update($request->all());
+        return redirect()->route('home');
+    }
+
+    public function generar_pdf(Request $request)
+    {
+        $datos = Rfc::find($request->id);
+        //return view('reportes.pdf')->with(compact('datos'));
+
+        $pdf = \PDF::loadView('reportes.pdf',compact('datos'));
+        return $pdf->download('reporte.pdf');
+
+        
     }
     /**
      * Show the form for creating a new resource.
@@ -46,7 +62,7 @@ class IncidentesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

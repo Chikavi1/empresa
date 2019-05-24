@@ -19,9 +19,6 @@
         <tbody>
             @foreach($incidentes as $incidente)
           <tr>
-            @if($incidente->descripcion == "otro" && $incidente->email == "ss@hotmail.com")
-                <h1>se repite</h1>
-            @endif
             <td><a href="{{route('rfc',$incidente->id)}}"> {{$incidente->id}}</a></td>
             <td>{{$incidente->descripcion}}</td>
             <td>{{$incidente->email}}</td>
