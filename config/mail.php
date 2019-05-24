@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'no-reply@Ayudachikavi.com'),
-        'name' => env('MAIL_FROM_NAME', 'Luis Rojas'),
+        'name' => env('MAIL_FROM_NAME', 'Soporte chikavi'),
     ],
 
     /*
