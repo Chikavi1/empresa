@@ -20,7 +20,7 @@
 				<div class="p5">
 
 					<div class="input-field col offset-m3 m6">
-			          <input id="email" name="email" type="text" class="validate">
+			          <input id="email" name="email" type="text" class="validate" required>
 			          <label for="email">Correo electronico</label>
 			        </div>
 
