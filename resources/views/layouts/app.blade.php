@@ -61,9 +61,7 @@
 @auth
 
         <ul class="right hide-on-med-and-down">
-           <li>
-            <a href="{{ route('rfc')}}" class="right">rfc</a>
-          </li>
+        
           <li>
             <a href="{{ route('problemas')}}" class="right">Problemas</a>
           </li>

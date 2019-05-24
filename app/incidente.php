@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class incidente extends Model
 {
     protected $fillable = [
-        'folio', 'email', 'descripcion',
+        'email', 'descripcion','status'
     ];
 }

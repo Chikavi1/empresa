@@ -19,7 +19,7 @@
         <tbody>
             @foreach($incidentes as $incidente)
           <tr>
-            <td>{{$incidente->folio}}</td>
+            <td>{{$incidente->id}}</td>
             <td>{{$incidente->descripcion}}</td>
             <td>{{$incidente->email}}</td>
             <td>{{$incidente->created_at}}</td>

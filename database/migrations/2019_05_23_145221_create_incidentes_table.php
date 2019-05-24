@@ -15,9 +15,9 @@ class CreateIncidentesTable extends Migration
     {
         Schema::create('incidentes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('folio');
             $table->string('descripcion');
             $table->string('email');
+            $table->string('status');
             $table->timestamps();
         });
     }

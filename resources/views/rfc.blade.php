@@ -9,7 +9,7 @@
 				</div>
 				<div class="col m8">
 					<p>
-						<input type="text" placeholder="NUMERO DE RFC"	>
+						<input type="text" placeholder="NUMERO DE RFC"	value="{{$datos->id}}">
 					</p>
 				</div>
 				<div class="col offset-m4 m8">

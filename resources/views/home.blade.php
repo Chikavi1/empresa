@@ -22,7 +22,7 @@
             @if($incidente->descripcion == "otro" && $incidente->email == "ss@hotmail.com")
                 <h1>se repite</h1>
             @endif
-            <td><a href="{{route('rfc')}}"> {{$incidente->folio}}</a></td>
+            <td><a href="{{route('rfc',$incidente->id)}}"> {{$incidente->id}}</a></td>
             <td>{{$incidente->descripcion}}</td>
             <td>{{$incidente->email}}</td>
             <td>{{$incidente->created_at}}</td>

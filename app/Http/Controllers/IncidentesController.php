@@ -14,19 +14,19 @@ class IncidentesController extends Controller
      */
     public function index()
     {
-        $incidentes = incidente::all();
+        $incidentes = incidente::where('status','LIKE','incidente')->get();
         return view('home')->with(compact('incidentes'));
     }
 
     public function problemas(){
-         $incidentes = incidente::all();
-
-
-         $incidente = $incidentes->unique('descripcion');
-         $incidentecorreo = $incidentes->unique('email');
-         dd($incidentecorreo);
-        $incidentes = $incidentes->diff($incidente);
+         $incidentes = incidente::where('status','LIKE','problema')->get();
         return view('problemas')->with(compact('incidentes'));
+    }
+
+    public function rfc(Request $request)
+    {
+        $datos = incidente::findorfail($request->folio);
+        return view('rfc')->with(compact('datos'));
     }
     /**
      * Show the form for creating a new resource.

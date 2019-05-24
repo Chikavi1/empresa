@@ -45,21 +45,28 @@ class ReportesController extends Controller
             $mensaje = $request->otro;
         }
 
+            if(incidente::where('email',$email)->exists() && incidente::where('descripcion',$mensaje)->exists() ){
+               $status = "problema";
+            }else{
+                $status = "incidente";
+            }
+
         $incidente = new incidente([
             'descripcion' => $mensaje,
-            'folio' => $folio,
-            'email' => $email
+            'id' => $folio,
+            'email' => $email,
+            'status' => $status
         ]);
         
         $incidente->save();
         //return view('email.folio')->with(compact('mensaje','tiempo','folio'));
 
-        Mail::send('email.folio',compact('mensaje','tiempo','folio'),function($msj){
+      /*  Mail::send('email.folio',compact('mensaje','tiempo','folio'),function($msj){
             $msj->subject('Reporte de chikavi');
             $msj->to('chikavi@hotmail.com');
         });
 
-        dd("se envio");
+        dd("se envio");*/
     }
 
 

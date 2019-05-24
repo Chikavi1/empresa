@@ -20,7 +20,7 @@
     </div>
     <div class="section white">
       <div class="row container">
-        <p class="grey-text text-darken-3 lighten-3">Aqui encontraras la solucion a tus problemas dentro de la plataforma</p>
+        <p class="grey-text text-darken-3 lighten-3">Porque mantener a nuestros Clientes satisfechos es lo Más importante para nosotros, te brindamos una pagina de soporte y asistencia técnica, la cual estará en funcionamiento las 24 hrs del día durante todo el año</p>
         <a href="{{ route('reporte')}}" class="btn btn-block color-cut">Iniciar reporte</a>
       </div>
     </div>
