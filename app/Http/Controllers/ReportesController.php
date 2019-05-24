@@ -65,9 +65,9 @@ class ReportesController extends Controller
         ]);
         $rfc->save();
 
-        Mail::send('email.folio',compact('mensaje','tiempo','folio'),function($msj){
+        Mail::send('email.folio',compact('mensaje','tiempo','folio'),function($msj) use($email){
             $msj->subject('Reporte de chikavi');
-            $msj->to('chikavi@hotmail.com');
+            $msj->to($email);
         });
 
          return redirect()->route('reporte')->with('success','Se te envio un correo,ya estamos trabajando en ello.');
