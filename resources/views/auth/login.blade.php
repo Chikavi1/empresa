@@ -30,10 +30,10 @@
                           </div>
 
                       
-                            <div class="center-align p1">
+                           <!-- <div class="center-align p1">
                                 <a href="{{ route('register') }}" >No tengo cuenta</a>
                             </div>
-                 
+                 -->
                         
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-block  color-cut">
