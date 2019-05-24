@@ -16,8 +16,8 @@ instalar estos dos elementos
 - *[composer](https://getcomposer.org/) *
 - *[laravel](https://laravel.com/docs/)* 
 
-correr 'composer install'
-correr la base de datos 'php artisan migrate'
-configurar la key 'php artisan key:generate'
+- correr 'composer install'
+- correr la base de datos 'php artisan migrate'
+- configurar la key 'php artisan key:generate'
 
 
